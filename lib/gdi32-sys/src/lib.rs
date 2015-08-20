@@ -281,14 +281,14 @@ extern "system" {
     // pub fn Escape();
     // pub fn EudcLoadLinkW();
     // pub fn EudcUnloadLinkW();
-    // pub fn ExcludeClipRect();
+    pub fn ExcludeClipRect(hdc: HDC, nLeftRect: c_int, nTopRect: c_int, nRightRect: c_int, nBottomRect: c_int) -> c_int;
     // pub fn ExtCreatePen();
     // pub fn ExtCreateRegion();
     // pub fn ExtEscape();
     // pub fn ExtFloodFill();
     pub fn ExtSelectClipRgn(hdc: HDC, hrgn: HRGN, mode: c_int) -> c_int;
     // pub fn ExtTextOutA();
-    // pub fn ExtTextOutW();
+    pub fn ExtTextOutW(hdc: HDC, X: c_int, Y: c_int, fuOptions: UINT, lprc: *const RECT, lpString: LPCWSTR, cbCount: UINT, lpdx: *const INT) -> BOOL;
     // pub fn FillPath();
     // pub fn FillRgn();
     // pub fn FixBrushOrgEx();
@@ -372,7 +372,7 @@ extern "system" {
     // pub fn GetFontResourceInfoW();
     // pub fn GetFontUnicodeRanges();
     // pub fn GetGlyphIndicesA();
-    // pub fn GetGlyphIndicesW();
+    pub fn GetGlyphIndicesW(hdc: HDC, lpstr: LPCWSTR, c: c_int, pgi: LPWORD, fl: DWORD) -> DWORD;
     // pub fn GetGlyphOutline();
     // pub fn GetGlyphOutlineA();
     // pub fn GetGlyphOutlineW();
@@ -429,14 +429,14 @@ extern "system" {
     // pub fn GetTextFaceA();
     // pub fn GetTextFaceW();
     // pub fn GetTextMetricsA();
-    // pub fn GetTextMetricsW();
+    pub fn GetTextMetricsW(hdc: HDC, lptm: LPTEXTMETRICW) -> BOOL;
     // pub fn GetViewportExtEx();
     // pub fn GetViewportOrgEx();
     // pub fn GetWinMetaFileBits();
     // pub fn GetWindowExtEx();
     // pub fn GetWindowOrgEx();
     // pub fn GetWorldTransform();
-    // pub fn IntersectClipRect();
+    pub fn IntersectClipRect(hdc: HDC, nLeftRect: c_int, nTopRect: c_int, nRightRect: c_int, nBottomRect: c_int) -> c_int;
     // pub fn InvertRgn();
     // pub fn LPtoDP();
     pub fn LineDDA(
@@ -512,7 +512,7 @@ extern "system" {
     // pub fn SetBitmapBits();
     // pub fn SetBitmapDimensionEx();
     pub fn SetBkColor(hdc: HDC, color: COLORREF) -> COLORREF;
-    // pub fn SetBkMode();
+    pub fn SetBkMode(hdc: HDC, iBkMode: c_int) -> c_int;
     // pub fn SetBoundsRect();
     // pub fn SetBrushOrgEx();
     // pub fn SetColorAdjustment();

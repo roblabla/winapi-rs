@@ -943,7 +943,7 @@ extern "system" {
     pub fn SetPropW(hWnd: HWND, lpString: LPCWSTR, hData: HANDLE) -> BOOL;
     pub fn SetRect(lprc: LPRECT, xLeft: c_int, yTop: c_int, xRight: c_int, yBottom: c_int) -> BOOL;
     pub fn SetRectEmpty(lprc: LPRECT) -> BOOL;
-    // pub fn SetScrollInfo();
+    pub fn SetScrollInfo(hWnd: HWND, fnBar: c_int, lpsi: LPCSCROLLINFO, fRedraw: BOOL) -> c_int;
     pub fn SetScrollPos(hWnd: HWND, nBar: c_int, nPos: c_int, bRedraw: BOOL) -> c_int;
     pub fn SetScrollRange(
         hWnd: HWND, nBar: c_int, nMinPos: c_int, nMaxPos: c_int, bRedraw: BOOL,

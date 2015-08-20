@@ -791,3 +791,10 @@ pub struct HELPINFO {
     pub MousePos: ::POINT,
 }
 pub type LPHELPINFO = *mut HELPINFO;
+
+pub const SIF_DISABLENOSCROLL: ::DWORD = 8;
+pub const SIF_PAGE: ::DWORD = 2;
+pub const SIF_POS: ::DWORD = 4;
+pub const SIF_RANGE: ::DWORD = 1;
+pub const SIF_TRACKPOS: ::DWORD = 16;
+pub const SIF_ALL: ::DWORD = 23;

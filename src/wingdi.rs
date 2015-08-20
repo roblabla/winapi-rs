@@ -415,3 +415,98 @@ pub struct BLENDFUNCTION {
     pub AlphaFormat: ::BYTE,
 }
 pub type PBLENDFUNCTION = *mut BLENDFUNCTION;
+
+// TODO : Whatare those numbers up there ?
+#[repr(C)] #[derive(Clone, Copy, Debug)]
+pub struct TEXTMETRICW {
+    pub tmHeight: ::LONG,
+    pub tmAscent: ::LONG,
+    pub tmDescent: ::LONG,
+    pub tmInternalLeading: ::LONG,
+    pub tmExternalLeading: ::LONG,
+    pub tmAveCharWidth: ::LONG,
+    pub tmMaxCharWidth: ::LONG,
+    pub tmWeight: ::LONG,
+    pub tmOverhang: ::LONG,
+    pub tmDigitizedAspectX: ::LONG,
+    pub tmDigitizedAspectY: ::LONG,
+    pub tmFirstChar: ::WCHAR,
+    pub tmLastChar: ::WCHAR,
+    pub tmDefaultChar: ::WCHAR,
+    pub tmBreakChar: ::WCHAR,
+    pub tmItalic: ::BYTE,
+    pub tmUnderlined: ::BYTE,
+    pub tmStruckOut: ::BYTE,
+    pub tmPitchAndFamily: ::BYTE,
+    pub tmCharSet: ::BYTE
+}
+
+pub type LPTEXTMETRICW = *mut TEXTMETRICW;
+
+pub const FW_DONTCARE: ::LONG = 0;
+pub const FW_THIN: ::LONG = 100;
+pub const FW_EXTRALIGHT: ::LONG = 200;
+pub const FW_ULTRALIGHT: ::LONG = FW_EXTRALIGHT;
+pub const FW_LIGHT: ::LONG = 300;
+pub const FW_NORMAL: ::LONG = 400;
+pub const FW_REGULAR: ::LONG = 400;
+pub const FW_MEDIUM: ::LONG = 500;
+pub const FW_SEMIBOLD: ::LONG = 600;
+pub const FW_DEMIBOLD: ::LONG = FW_SEMIBOLD;
+pub const FW_BOLD: ::LONG = 700;
+pub const FW_EXTRABOLD: ::LONG = 800;
+pub const FW_ULTRABOLD: ::LONG = FW_EXTRABOLD;
+pub const FW_HEAVY: ::LONG = 900;
+pub const FW_BLACK: ::LONG = FW_HEAVY;
+
+pub const ANSI_CHARSET: ::BYTE = 0;
+pub const BALTIC_CHARSET: ::BYTE = 186;
+pub const CHINESEBIG5_CHARSET: ::BYTE = 136;
+pub const DEFAULT_CHARSET: ::BYTE = 1;
+pub const EASTEUROPE_CHARSET: ::BYTE = 238;
+pub const GB2312_CHARSET: ::BYTE = 134;
+pub const GREEK_CHARSET: ::BYTE = 161;
+pub const HANGUL_CHARSET: ::BYTE = 129;
+pub const MAC_CHARSET: ::BYTE = 77;
+pub const OEM_CHARSET: ::BYTE = 255;
+pub const RUSSAN_CHARSET: ::BYTE = 204;
+pub const SHIFTJIS_CHARSET: ::BYTE = 128;
+pub const SYMBOL_CHARSET: ::BYTE = 2;
+pub const TURKISH_CHARSET: ::BYTE = 162;
+pub const VIETNAMESE_CHARSET: ::BYTE = 163;
+pub const JOHAB_CHARSET: ::BYTE = 130;
+pub const ARABIC_CHARSET: ::BYTE = 178;
+pub const HEBREW_CHARSET: ::BYTE = 177;
+pub const THAI_CHARSET: ::BYTE = 222;
+
+pub const OUT_CHARACTER_PRECIS: ::BYTE = 2;
+pub const OUT_DEFAULT_PRECIS: ::BYTE = 0;
+pub const OUT_DEVICE_PRECIS: ::BYTE = 5;
+pub const OUT_OUTLINE_PRECIS: ::BYTE = 8;
+//pub const OUT_PS_ONLY_PRECIS: ::BYTE = ;
+pub const OUT_RASTER_PRECIS: ::BYTE = 6;
+pub const OUT_STRING_PRECIS: ::BYTE = 1;
+pub const OUT_STROKE_PRECIS: ::BYTE = 3;
+pub const OUT_TT_ONLY_PRECIS: ::BYTE = 7;
+pub const OUT_TT_PRECIS: ::BYTE = 4;
+
+pub const CLIP_DEFAULT_PRECIS: ::BYTE = 0;
+// TODO : Implement rest of clips
+
+pub const ANTIALIASED_QUALITY: ::BYTE = 4;
+//pub const CLEARTYPE_QUALITY: ::BYTE = ;
+pub const DEFAULT_QUALITY: ::BYTE = 0;
+pub const DRAFT_QUALITY: ::BYTE = 1;
+pub const NONANTIALIASED_QUALITY: ::BYTE = 3;
+pub const PROOF_QUALITY: ::BYTE = 2;
+
+pub const DEFAULT_PITCH: ::BYTE = 0;
+pub const FIXED_PITCH: ::BYTE = 1;
+pub const VARIABLE_PITCH: ::BYTE = 2;
+
+pub const FF_DECORATIVE: ::BYTE = 80;
+pub const FF_DONTCARE: ::BYTE = 0;
+pub const FF_MODERN: ::BYTE = 48;
+pub const FF_ROMAN: ::BYTE = 16;
+pub const FF_SCRIPT: ::BYTE = 64;
+pub const FF_SWISS: ::BYTE = 32;
