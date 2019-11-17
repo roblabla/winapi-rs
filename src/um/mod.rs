@@ -254,6 +254,7 @@ pub mod gl;
 #[cfg(feature = "utilapiset")] pub mod utilapiset;
 #[cfg(feature = "uxtheme")] pub mod uxtheme;
 #[cfg(feature = "verrsrc")] pub mod verrsrc;
+#[cfg(feature = "versionhelpers")] pub mod versionhelpers;
 #[cfg(feature = "vsbackup")] pub mod vsbackup;
 #[cfg(feature = "vss")] pub mod vss;
 #[cfg(feature = "vsserror")] pub mod vsserror;
